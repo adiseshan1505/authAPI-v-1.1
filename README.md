@@ -1,4 +1,4 @@
-# Auth API
+# authAPI-v-1.1
 
 A simple authentication API built with Node.js, Express, and MongoDB. Provides user registration and login functionality with JWT-based authentication.
 
