@@ -1,24 +1,24 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 const JWT_SECRET = process.env.JWT_SECRET;
-import { signupSchema, signinSchema } from '../utils/schema';
-import { UserModel } from '../config/db';
+import { signupSchema, signinSchema } from '../utils/schema.js';
+import { UserModel } from '../config/db.js';
 
 // signup logic
-export async function signup(req, res) {
-    const parsedData = signupSchema.safeParse(req, body);
+export async function signUp(req, res) {
+    const parsedData = signupSchema.safeParse(req.body);
     if (!parsedData.success) {
         return res.status(403).json({
             message: "Invalid input"
         });
     }
     const { name, email, password } = parsedData.data;
-    const hashedPassword = bcrypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(password, 10);
     try {
         await UserModel.create({
             name: name,
             email: email,
-            apssword: hashedPassword
+            password: hashedPassword
         });
         res.json({
             message: "You are signed up"
@@ -36,7 +36,7 @@ export async function signup(req, res) {
 }
 
 //signin logic
-export async function signin(req, res) {
+export async function signIn(req, res) {
     const parsedData = signinSchema.safeParse(req.body);
     if (!parsedData.success) {
         return res.status(403).json({
@@ -52,8 +52,8 @@ export async function signin(req, res) {
             message: "Invalid credentials"
         });
     }
-    const valid_pwd = await bcrypt.compare(password, user.password);
-    if (!valid_pwd) {
+    const check_pwd = await bcrypt.compare(password, user.password);
+    if (!check_pwd) {
         return res.status(403).json({
             message: "Invalid credentials"
         });
