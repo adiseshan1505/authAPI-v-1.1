@@ -1,4 +1,4 @@
-# Auth API
+# authAPI-v-1.1
 
 A simple authentication API built with Node.js, Express, and MongoDB. Provides user registration and login functionality with JWT-based authentication.
 
@@ -103,11 +103,8 @@ Authenticate a user and receive a JWT token.
 - 500: Internal server error
 - 401: Invalid token (for protected routes, if implemented)
 
-## Upcoming updates
+## Upcoming updates -> All getting updated soon!!!
 - Refreshing tokens
 - Token blacklisting and logout support
 - Forgot or reset password
 - Rate limiting
-
-## Status
-- All getting updated in progress
