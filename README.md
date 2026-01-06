@@ -109,6 +109,5 @@ Authenticate a user and receive a JWT token.
 - Forgot or reset password
 - Rate limiting
 
-## License
-
-ISC
+## Status
+- All getting updated in progress
