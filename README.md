@@ -105,7 +105,7 @@ Authenticate a user and receive a JWT token.
 
 ## Upcoming updates -> All getting updated soon!!!
 - 2FA using SMTP:- OTP
-- Encoding texhniques
+- Encoding techniques
 - Refreshing tokens
 - Token blacklisting and logout support
 - Forgot or reset password
