@@ -6,7 +6,7 @@ A simple authentication API built with Node.js, Express, and MongoDB. Provides u
 
 - User signup with email and password
 - User signin with JWT token generation
-- Password hashing using bcrypt
+- Password hashing (SHA-256) using bcrypt
 - Input validation using Zod
 - MongoDB for data storage
 
@@ -104,6 +104,8 @@ Authenticate a user and receive a JWT token.
 - 401: Invalid token (for protected routes, if implemented)
 
 ## Upcoming updates -> All getting updated soon!!!
+- 2FA using SMTP:- OTP
+- Encoding texhniques
 - Refreshing tokens
 - Token blacklisting and logout support
 - Forgot or reset password
