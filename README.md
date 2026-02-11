@@ -22,7 +22,7 @@ A simple authentication API built with Node.js, Express, and MongoDB. Provides u
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/adiseshan1505/authAPI-v-1.1.git
    cd authAPI
    ```
 
