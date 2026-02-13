@@ -1,4 +1,4 @@
-# authAPI-v-1.1
+# authAPI-v-2
 
 A simple authentication API built with Node.js, Express, and MongoDB. Provides user registration and login functionality with JWT-based authentication.
 
@@ -17,7 +17,7 @@ A simple authentication API built with Node.js, Express, and MongoDB. Provides u
 - **Authentication**: JWT (jsonwebtoken)
 - **Security**: bcrypt for password hashing
 - **Validation**: Zod
-
+- **2FA**: Using nodemailer for SMTP
 ## Setup
 
 1. **Clone the repository**
@@ -102,11 +102,3 @@ Authenticate a user and receive a JWT token.
 - 403: Invalid input or user already exists
 - 500: Internal server error
 - 401: Invalid token (for protected routes, if implemented)
-
-## Upcoming updates -> All getting updated soon!!!
-- 2FA using SMTP:- OTP
-- Encoding techniques
-- Refreshing tokens
-- Token blacklisting and logout support
-- Forgot or reset password
-- Rate limiting
